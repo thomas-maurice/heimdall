@@ -13,7 +13,7 @@ function automode.on_load()
 end
 
 function automode.on_join(server, author, chan)
-  local n,u,h = luanet.irc.splitUser(author)
+  local n,u,h = heimdall.irc.splitUser(author)
   local u = users:checkUser(n,h)
   
   if users:hasFlag(u, "v") then

@@ -15,7 +15,7 @@ end
 
 -- On a kick
 function autorejoin.on_kick(server, author, chan, target, reason)
-	nick, user, host = luanet.irc.splituser(author)
+	nick, user, host = heimdall.irc.splitUser(author)
 	-- If we are the target of the kick, we rejoin the channel
 	if target == bot.nick then
 		server:join(chan)

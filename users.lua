@@ -23,7 +23,7 @@
 -- Those flags are used to set permissions of users on the bot.
 
 users.thomas = {
-	-- Svart!anything@baz-81C52E6B should do it
+	-- Svart!*@baz-81C52E6B should do it
 	nicks = {"Svart", "Svartbergtroll"},
 	hosts = {"baz-81C52E6B"},
 	access = "Oohv"

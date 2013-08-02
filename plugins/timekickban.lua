@@ -96,7 +96,7 @@ end
 -- Guette les évènements de messages, genre si on demande le banissement d'un
 -- utilisateur du canal
 function timekickban.on_privmsg(server, author, target, message)
-	local n,u,h = luanet.irc.splitUser(author)
+	local n,u,h = heimdall.irc.splitUser(author)
 	local u = users:checkUser(n,h)
 	-- If the user is not entitled to perform those actions
 	-- quit
@@ -129,11 +129,11 @@ function timekickban.on_privmsg(server, author, target, message)
 				
 				-- Kaaaaa
 				server:privmsg(chan, "Attention " .. ban.nick .. ", impact dans 3...")
-				luanet.sleep(1000) -- mehaaaaaaaa
+				heimdall.sleep(1000) -- mehaaaaaaaa
 				server:privmsg(chan, "2...")
-				luanet.sleep(1000) -- mehaaaaaaaa
+				heimdall.sleep(1000) -- mehaaaaaaaa
 				server:privmsg(chan, "1...")
-				luanet.sleep(1000)
+				heimdall.sleep(1000)
 				timekickban.ban(server, ban) -- MEHAAAAAAAAAAAAAA
 				server:kick(chan, ban.nick, "zéro - banni pour " .. tostring(dur) .. " secondes") -- Boom.
 				

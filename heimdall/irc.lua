@@ -10,7 +10,6 @@ heimdall.irc = {}
 heimdall.irc.__index = heimdall.irc
 
 -- heimdall.irc.server
--- For the nice OO part
 heimdall.irc.server = {}
 heimdall.irc.server.__index = heimdall.irc.server
 
@@ -92,7 +91,7 @@ function heimdall.irc.server:getBufferedLine()
   end
 end
 
--- parts a chan
+-- parts from a chan
 function heimdall.irc.server:part(chan, message)
   if message == nil then message = "" end
   self:send("PART " .. chan .. " " .. message)

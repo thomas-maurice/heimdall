@@ -32,7 +32,7 @@ function mods.err_toirc(err)
 end	
 
 function mods.on_privmsg(server, author, target, message)
-	local n,u,h = luanet.irc.splitUser(author)
+	local n,u,h = heimdall.irc.splitUser(author)
 	local u = users:checkUser(n,h)
 	-- If the user is not entitled to perform those actions
 	-- quit
