@@ -7,6 +7,10 @@
 raw = {}
 raw.name = "raw"
 
+function raw.on_unload()
+	print("Unloading module `raw`")
+end
+
 -- On load
 function raw.on_load()
 	print(" `raw` by Thomas Maurice loaded")

@@ -10,17 +10,17 @@
 
 print("+------------------------------------------------+")
 print("|                                                |")
-print("|              Heimdall Bot v0.1                 |")
+print("|              Heimdall Bot v0.2                 |")
 print("|                                                |")
 print("+------------------------------------------------+\n")
 
 print("Loading...")
 
 bot = {}
+heimdall = {}
 
 -- Loads the modules
-require 'luanet.irc'
-require 'luanet.regex'
+require 'heimdall.irc'
 require 'heimdall.users'
 require 'heimdall.handles'
 require 'heimdall.modules'
@@ -43,8 +43,8 @@ end
 
 -- Create the bot
 print("Connecting " .. bot.host .. ":" .. bot.port)
-b = luanet.irc.newServer(bot.host, bot.port)
-
+b = heimdall.irc.newServer(bot.host, bot.port)
+unloadmodule("raw")
 -- Configure it
 b.on_privmsg = on_privmsg
 b.on_notice = on_notice
@@ -56,14 +56,16 @@ b.on_connect = on_connect
 b.on_join = on_join
 b.on_time = on_time
 
-b.waittime = 25
+b.waittime = 0.1
 
 b.nick = bot.nick
 b.user = bot.user
 
 -- Launch it and identify
 b:connectServer()
-b:identify()
+if b:isConnected() then
+	b:identify()
+end
 
 -- Proceed :)
 while b:isConnected() do

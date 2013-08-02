@@ -24,13 +24,12 @@ end
 
 -- Unloads a module, it's functions will be unavailable.
 function unloadmodule(mod)
-	local i = #modules
-  if modules[i].on_unload ~= nil then
-  	modules[i].on_unload()
-  end
   package.loaded["plugins." .. mod] = nil
   for k,v in ipairs(modules) do
     if v.name == mod then
+    	if modules[k].on_unload ~= nil then
+  			modules[k].on_unload()
+  		end
       table.remove(modules, k)
     end
   end
