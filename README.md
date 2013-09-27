@@ -4,6 +4,10 @@ heimdall
 Heimdall is an IRC bot written in [Lua](http://lua.org).
 It's very easy to use and extand.
 
+## Dependencies
+You need to install `lua-socket` in order to get the bot running.
+Of course, you need Lua, but not worth saying it ;)
+
 ## Install
 To install Heimdall, just clone the Git repository :
 ```
@@ -30,7 +34,7 @@ the configuration abilities of the bot and enhance it's dynamism.
 
 ### conf.lua
 This is the main configuration file of the program, it is used to specify
-which server we will connect, which port, ssl-enctypted or not, username
+which server we will connect, which port, username
 information and stuff like that. Here it is just for an example. I think the
 comments are self-explanatories.
 ```
