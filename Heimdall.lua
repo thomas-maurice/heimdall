@@ -9,9 +9,7 @@
 -- plugins/ directory. Have fun :)
 
 print("+------------------------------------------------+")
-print("|                                                |")
 print("|              Heimdall Bot v0.2                 |")
-print("|                                                |")
 print("+------------------------------------------------+\n")
 
 print("Loading...")
