@@ -42,8 +42,8 @@ end
 -- Create the bot
 print("Connecting " .. bot.host .. ":" .. bot.port)
 b = heimdall.irc.newServer(bot.host, bot.port)
-unloadmodule("raw")
--- Configure it
+
+-- Bind it to the callback functions
 b.on_privmsg = on_privmsg
 b.on_notice = on_notice
 b.on_numeric = on_numeric
