@@ -59,8 +59,9 @@ a module, or a system, core option.
 This file is used to add users to the robot. With users you can add some
 *permission flags* which will determine what the given user is allowed to
 do on the bot. There are some permission levels :
+ 
  * O : Owner
- *	 M : Master
+ * M : Master
  * R : User class 3
  * Q : User class 2
  * P : User class 1
@@ -70,10 +71,12 @@ do on the bot. There are some permission levels :
 One flag can imply others. That means that a user flagged as "Owner" will
 automatically benefit all the privileges of all the acces levels below him.
 For exemple, we have the following implications :
+
 * O => OMRQPU
 * Q => QPU
 
 Channel mode flags are also possible to specify :
+
 * o : auto op on all channels
 * h : auto half op on all channels
 * v : auto voice on all channels
