@@ -1,8 +1,8 @@
 heimdall
 ========
 
-Heimdall is an IRC bot written in Lua. It's very easy to use
-and extand.
+Heimdall is an IRC bot written in [Lua](http://lua.org).
+It's very easy to use and extand.
 
 ## Install
 To install Heimdall, just clone the Git repository :
