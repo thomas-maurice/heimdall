@@ -113,6 +113,7 @@ users.thomas = {
 
 ## Creating a module
 
+### The basics
 To create a module, there is a skeleton to follow, the module we will
 study will be called `tesmodule` and will be saved as
 `plugins/testmodule.lua`. All modules shall be saved as
@@ -136,5 +137,18 @@ function testmodule.on_privmsg(server, author, target, message)
   print(author, message)
 end
 
-tablemodule.insert(modules, test)
+table.insert(modules, testmodule)
 ```
+
+So this example is easy. First let's look at the skeleton. You have to
+define a table for your module, and name it, that's why
+`testmodule.name = "testmodule"` is for. Then you have to add all
+the callback functions to the module, for exemple `on_load` or
+`on_privmsg` but there are many more ! Each one with a specific
+prototype. Then you have to insert your module into the robot's module
+table : `teble.insert(modules, testmodule).
+
+It's that easy. Next, the callback functions !
+
+### Callback functions
+More to come
