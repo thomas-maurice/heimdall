@@ -25,7 +25,7 @@ Then you can launch it
 
 Tadaa !
 
-## Configure Heimdall
+## Configuring Heimdall
 The two main configuration files you need to know are `users.lua` and
 `conf.lua`, both situated in the root directory of the project.
 They are written in Lua and evaluated everytime the robot starts up.
@@ -109,4 +109,32 @@ users.thomas = {
 	hosts = {"baz-81C52E6B"},
 	access = "Oohv"
 }
+```
+
+## Creating a module
+
+To create a module, there is a skeleton to follow, the module we will
+study will be called `tesmodule` and will be saved as
+`plugins/testmodule.lua`. All modules shall be saved as
+`plugins/<name>.lua`.
+
+Now for the exemple :
+```
+-- testmodule
+-- Author : Thomas Maurice <tmaurice59@gmail.com>
+--
+
+testmodule = {}
+testmodule.name = "testmodule"
+
+-- On load
+function testmodule.on_load()
+	print(" `testmodule` by Thomas Maurice loaded")
+end
+
+function testmodule.on_privmsg(server, author, target, message)
+  print(author, message)
+end
+
+tablemodule.insert(modules, test)
 ```
