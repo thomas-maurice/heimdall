@@ -4,7 +4,7 @@
 --
 
 -- Host of the server
-bot.host = "localhost"
+bot.host = "irc.freenode.com"
 -- Port of the server
 bot.port = 6667
 

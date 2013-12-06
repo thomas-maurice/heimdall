@@ -54,7 +54,8 @@ b.on_connect = on_connect
 b.on_join = on_join
 b.on_time = on_time
 
-b.waittime = 0.1
+b.waittime = 0.01
+
 
 b.nick = bot.nick
 b.user = bot.user

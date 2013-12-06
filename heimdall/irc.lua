@@ -35,7 +35,7 @@ function heimdall.irc.newServer(host, port)
   
   t.connected = false
 	
-  setmetatable(t,heimdall.irc.server)
+  setmetatable(t, heimdall.irc.server)
   return t
 end
 
@@ -53,8 +53,9 @@ end
 -- heimdall.irc.server
 -- connects the socket
 function heimdall.irc.server:connectServer()
-	self.socket:settimeout(0.1)
+	self.socket:settimeout(5)
   r, err = self.socket:connect(self.host, self.port)
+	self.socket:settimeout(0.1)
   if r == nil then
   	self.connected = false
   	print("Impossible to connect: " .. err)
