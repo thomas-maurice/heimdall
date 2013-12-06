@@ -3,7 +3,7 @@
 --
 -- Author : Thomas Maurice
 
-require "socket"
+socket = require 'socket'
 
 -- heimdall.irc
 heimdall.irc = {}
